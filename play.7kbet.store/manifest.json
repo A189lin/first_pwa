@@ -1,0 +1,54 @@
+{
+  "name" : "7Kbet",
+  "description" : "This app is super awesome",
+  "orientation" : "portrait",
+  "display" : "standalone",
+  "icons" : [ {
+    "src" : "/en-USicon48.png?v=1719814723",
+    "type" : "image/png",
+    "sizes" : "48x48"
+  }, {
+    "src" : "/en-USicon72.png?v=1719814723",
+    "type" : "image/png",
+    "sizes" : "72x72"
+  }, {
+    "src" : "/en-USicon96.png?v=1719814723",
+    "type" : "image/png",
+    "sizes" : "96x96"
+  }, {
+    "src" : "/en-USicon128.png?v=1719814723",
+    "type" : "image/png",
+    "sizes" : "128x128"
+  }, {
+    "src" : "/en-USicon144.png?v=1719814723",
+    "type" : "image/png",
+    "sizes" : "144x144"
+  }, {
+    "src" : "/en-USicon192.png?v=1719814723",
+    "type" : "image/png",
+    "sizes" : "192x192"
+  }, {
+    "src" : "/en-USicon256.png?v=1719814723",
+    "type" : "image/png",
+    "sizes" : "256x256"
+  }, {
+    "src" : "/en-USicon512.png?v=1719814723",
+    "type" : "image/png",
+    "sizes" : "512x512"
+  } ],
+  "screenshots" : [ {
+    "src" : "/pwa_screenshot/profile/screenshot/2024/07/01/Snipaste_2024-07-01_14-19-17_20240701141941A001.png",
+    "sizes" : "335x658",
+    "type" : "image/png"
+  }, {
+    "src" : "/pwa_screenshot/profile/screenshot/2024/07/01/Snipaste_2024-07-01_14-18-56_20240701142024A002.png",
+    "sizes" : "415x751",
+    "type" : "image/png"
+  } ],
+  "scope" : "/",
+  "categories" : [ "Game", "Tools" ],
+  "short_name" : "7Kbet",
+  "start_url" : "/m/index.html",
+  "background_color" : "#000000",
+  "theme_color" : "#FFFFFF"
+}

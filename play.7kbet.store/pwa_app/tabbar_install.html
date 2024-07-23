@@ -1,0 +1,354 @@
+<html lang="en" dir="ltr"><head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no,width=device-width">
+    <meta name="description" content="web">
+    <link rel="manifest" href="/manifest.json">
+    <title>7Kbet</title>
+    <link href="https://root.upapp.io" rel="preconnect">
+    <link href="https://root.upapp.io" rel="dns-prefetch">
+    <script src="js/platform.js"></script>
+    <link rel="stylesheet" href="css/myflexible.css">
+    <link rel="stylesheet" href="css/installcss.css">
+    <script>
+        window.__rb = {
+            template_id: 0,
+        };
+    </script>
+    <script src="js/pwa.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+    <script src="js/lang.js"></script>
+<link rel="icon" href="https://play.7kbet.store/pwa_api/profile_pwa/11/en-USicon192.png?v=1719814723" type="image/x-icon"><script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-8FWM3R3401" async=""></script></head>
+<body>
+<div class="install" id="installWrap">
+    <div class="top-placeholder"></div>
+    <div class="topbar active" id="topbar">
+        <img class="topbar__left" src="images/google_play.png" alt="" loading="lazy">
+        <img class="topbar__right" src="images/google_play_topbar_right.png" alt="" loading="lazy">
+    </div>
+    <div class="topwrap">
+        <div class="header-icon">
+            <img data-value="app_icon" class="toplogo" id="logo" alt="" loading="lazy" src="https://play.7kbet.store/pwa_api/profile_pwa/11/en-USicon192.png?v=1719814723">
+            <div class="loading-circle" id="loading"></div>
+        </div>
+        <div class="right">
+            <div class="header__info-title ">
+                <h5 class="name" id="info-name">7Kbet</h5>
+                <img class="header__info-title-tag" src="images/ic_tag.png" alt="" loading="lazy">
+            </div>
+            <p class="author" id="installProgress">7Kbet</p>
+            <p class="info"></p>
+            <p class="header__info-play">
+                <img class="ic_dun" loading="lazy" src="images/ic_dun.png" alt="">
+                <span id="by_verify">Verified by Play Protect</span>
+            </p>
+        </div>
+    </div>
+    <div class="installinfo">
+        <div class="item scroll-view-item_H">
+            <div class="num">
+                <span id="star">4.8</span>
+                <img class="xingsvg" src="images/xing.svg" loading="lazy" alt="">
+            </div>
+            <div class="info">
+                <span id="commentText">3M</span>
+                <span style="margin-left: 2px" id="reviews">reviews</span>
+            </div>
+        </div>
+        <div class="item scroll-view-item_H">
+            <div class="num" id="downloadText">57M+</div>
+            <div class="info" id="downloads">Downloads</div>
+        </div>
+        <div class="item scroll-view-item_H">
+            <div class="num">
+                <img class="yearwebd" src="images/icon_year_16.webp" loading="lazy" alt="">
+            </div>
+            <div class="info" id="everyone">Rated for 16+</div>
+        </div>
+    </div>
+    <div class="installbtn-box" id="rapid-btn" style="display: block;">
+        <div class="install-btn__ing">
+            <div class="install-btn__ing__rapid">
+                <img loading="lazy" src="images/ic_sd.png" alt="">
+                <span id="rapid_install">Rapid Install</span>
+            </div>
+            <div class="install-btn__ing__countdown">
+                <span id="download_within">Download within</span>
+                <span style="margin-left: 4px;margin-right: 4px;" id="countdownNum">10</span>s
+            </div>
+        </div>
+    </div>
+
+    <div class="installbtn" id="install-btn" style="display: none;">Install</div>
+
+    <div class="share-row">
+        <div class="share-row__item">
+            <img src="images/ic_share.png" loading="lazy" alt="">
+            <div id="share">Share</div>
+        </div>
+        <div class="share-row__item">
+            <img src="images/ic_addwishlist.png" loading="lazy" alt="">
+            <div id="add_list">Add to wishlist</div>
+        </div>
+    </div>
+<!--    <div class="bannerinfo">-->
+<!--        <div class="banner_view_item_H" @click="showBigImage(index)" v-for="(item, index) in screenshots" :key="index">-->
+<!--            <img class="bannerimg" :src="api_path + item.image" alt loading="lazy"/>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="img-scroll">
+        <div class="img-scroll__list" data-value="pic_list"><div class="img-scroll__view">
+                                        <img loading="lazy" id="img-0" alt="" src="https://play.7kbet.store/pwa_api/profile/screenshot/2024/07/01/Snipaste_2024-07-01_14-19-17_20240701141941A001.png">
+                                      </div><div class="img-scroll__view">
+                                        <img loading="lazy" id="img-1" alt="" src="https://play.7kbet.store/pwa_api/profile/screenshot/2024/07/01/Snipaste_2024-07-01_14-18-56_20240701142024A002.png">
+                                      </div></div>
+    </div>
+
+    <div class="aboutapp">
+        <div>
+            <img class="arrowsvg" src="images/arrow2.svg" loading="lazy" alt="">
+            <h5 class="title" id="about_app">About this app</h5>
+            <div class="intro" id="description">This app is super awesome</div>
+        </div>
+        <div class="btngroup" id="description-label">
+            <div class="govbtn">Game</div>
+            
+            <div class="govbtn">Tools</div>
+            </div>
+    </div>
+    <div class="aboutapp vratings">
+        <img class="arrowsvg" src="images/arrow2.svg" alt="">
+        <div class="title" id="reviews_ratings">Ratings and reviews</div>
+        <div class="intro" id="reviews_dec">Ratings and reviews are verified and are from people who use the same type of device that you  use</div>
+    </div>
+
+    <div class="scorewrap">
+        <div class="left">
+            <div class="num" id="star-num">4.8</div>
+            <div class="comments__list-stars" id="star-list"><div><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_half_star.png" style="width: 14px; height: 14px; margin-right: 2px;"></div></div>
+            <div class="amount" id="comment-people">3M</div>
+        </div>
+
+        <div class="right" id="comments-progress">
+        <div><div class="item">
+            5
+            <div class="progress"><div class="progress-bar" style="width: 86%;"></div></div>
+        </div><div class="item">
+            4
+            <div class="progress"><div class="progress-bar" style="width: 11%;"></div></div>
+        </div><div class="item">
+            3
+            <div class="progress"><div class="progress-bar" style="width: 3%;"></div></div>
+        </div><div class="item">
+            2
+            <div class="progress"><div class="progress-bar" style="width: 2%;"></div></div>
+        </div><div class="item">
+            1
+            <div class="progress"><div class="progress-bar" style="width: 0%;"></div></div>
+        </div></div></div>
+    </div>
+    <div class="evaluate">
+        <div class="item" id="comment-list">
+                <div class="item">
+                    <div class="topwrap">
+                        <img class="headimg" src="https://play.7kbet.store/pwa_api/profile/upload/avatar/2024/06/26/cat_pic_0223_20240626172840A040.jpg" alt="" loading="lazy">
+                        <div class="name">Isabella Moore</div>
+                        <img class="lve" src="images/lve.svg" loading="lazy" alt="">
+                    </div>
+                    <div class="grade">
+                        <div class="comments__list-stars">
+                            <img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;">
+                        </div>
+                        <div class="date">2024-07-01 14:17:19</div>
+                    </div>
+                    <div class="comment">Love, love, love this app! It's incredibly user-friendly and packed with powerful features. From managing my personal projects to coordinating with my team at work, it's been indispensable. It's the perfect blend of simplicity and functionality. Highly recommend to anyone looking to boost productivity!</div>
+                      <div class="feedback">
+                        <div class="ishelp" id="help">Was this review helpful ?</div>
+                        <div class="groupbtn">
+                            <button class="isbtn" data-index="0" id="yes-0">Yes</button>
+                            <button class="isbtn" data-index="0" id="no-0">No</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+                <div class="item">
+                    <div class="topwrap">
+                        <img class="headimg" src="https://play.7kbet.store/pwa_api/profile/upload/avatar/2024/06/26/cat_pic_0167_20240626173059A045.jpg" alt="" loading="lazy">
+                        <div class="name">Lucas Martinez</div>
+                        <img class="lve" src="images/lve.svg" loading="lazy" alt="">
+                    </div>
+                    <div class="grade">
+                        <div class="comments__list-stars">
+                            <img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;">
+                        </div>
+                        <div class="date">2024-07-01 14:17:19</div>
+                    </div>
+                    <div class="comment">As someone who juggles multiple projects and deadlines, this app has been a lifesaver. It keeps me organized and on track without overwhelming me with unnecessary features. The user interface is clean and intuitive, making it easy to prioritize tasks and manage my time effectively.</div>
+                      <div class="feedback">
+                        <div class="ishelp" id="help">Was this review helpful ?</div>
+                        <div class="groupbtn">
+                            <button class="isbtn" data-index="1" id="yes-1">Yes</button>
+                            <button class="isbtn" data-index="1" id="no-1">No</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+                <div class="item">
+                    <div class="topwrap">
+                        <img class="headimg" src="https://play.7kbet.store/pwa_api/profile/upload/avatar/2024/06/27/cat_pic_0437_20240627112910A031.jpg" alt="" loading="lazy">
+                        <div class="name">Ella Price</div>
+                        <img class="lve" src="images/lve.svg" loading="lazy" alt="">
+                    </div>
+                    <div class="grade">
+                        <div class="comments__list-stars">
+                            <img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;"><img class="star" alt="" src="images/ic_full_star.png" style="width: 14px; height: 14px; margin-right: 2px;">
+                        </div>
+                        <div class="date">2024-07-01 14:17:19</div>
+                    </div>
+                    <div class="comment"> I've been using this app for a while now, and it's become an essential part of my daily routine. It's intuitive, efficient, and has all the features I need to stay organized and productive. The interface is clean and easy to navigate, and the sync across devices is seamless. Highly recommend! 
+</div>
+                      <div class="feedback">
+                        <div class="ishelp" id="help">Was this review helpful ?</div>
+                        <div class="groupbtn">
+                            <button class="isbtn" data-index="2" id="yes-2">Yes</button>
+                            <button class="isbtn" data-index="2" id="no-2">No</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+    <div class="aboutapp vratings">
+        <img class="arrowsvg" src="images/arrow2.svg" loading="lazy" alt="">
+        <div class="title" id="data_safe">data safety</div>
+        <div class="intro" id="data_safe_dec">Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region and age The developer provided this information and may update it over time.</div>
+    </div>
+    <div class="other">
+        <div class="otherli">
+            <img class="iconimg" src="images/share_data.jpg" loading="lazy" alt="">
+            <div class="otherdt" id="data_share">No data shared with third parties
+Learn more about how developers declare sharing</div>
+        </div>
+        <!--            <div class="otherdd">Personal info and Device or other IDs</div>-->
+        <div class="otherli">
+            <img class="iconimg" src="images/collect_data.jpg" loading="lazy" alt="">
+            <div class="otherdt" id="data_update">This app may collect these data types
+App info and performance</div>
+        </div>
+        <!--            <div class="otherdd">Location,Personal info and 12 others</div>-->
+        <div class="otherli">
+            <img class="iconimg" src="images/encrypted_data.jpg" loading="lazy" alt="">
+            <div class="otherdt" id="data_lock">Data is encrypted in transit</div>
+        </div>
+        <div class="otherli">
+            <img class="iconimg" src="images/deleted_data.jpg" loading="lazy" alt="">
+            <div class="otherdt" id="data_delete">Data can’t be deleted</div>
+        </div>
+        <a href="javascript:;" class="otherlink" id="see_details">See details</a>
+    </div>
+    <div class="popup" id="popup-mask" style="display: none;">
+        <div class="layer__mask"></div>
+        <div class="popup-content">
+            <img src="images/img_reward.png" class="back_logo" loading="lazy" alt="">
+            <div class="back_title" id="collecting">
+                We are collecting  <span> objective </span> reviews for this apps
+            </div>
+            <div class="back__content">
+                <img class="back__icon" loading="lazy" data-value="popup-icon" alt="" src="https://play.7kbet.store/pwa_api/profile_pwa/11/en-USicon192.png?v=1719814723">
+                <div class="back__info">
+                    <div class="back__info__title">
+                        <span data-value="popup-name">7Kbet</span>
+                        <img src="images/ic_tag.png" loading="lazy" alt="">
+                    </div>
+                    <div class="back__info__description" data-value="popup-developer">7Kbet</div>
+                    <div class="back__info__play">
+                        <img src="images/ic_dun.png" class="ic_dun" id="popup-by_verify" loading="lazy" alt="">
+                        Verified by Play Protect
+                    </div>
+                </div>
+            </div>
+
+            <div class="back__detail">
+                <img src="images/google_play_img.png" loading="lazy" alt="">
+                <div class="back__detail__introduction" id="popup-tips">
+                    If you can
+                    <span> download the app </span>
+                    and leave an
+                    <span>objective</span>
+                    review and rating，You will have the chance to receive a
+                    <span> $20</span>
+                    Google Play gift card.
+                </div>
+            </div>
+            <div class="back__btn" id="popup-install" style="display: flex;">Install</div>
+            <div class="back__btn" id="popup-open" style="display: none;">Play</div>
+
+        </div>
+
+    </div>
+
+    <div class="rb-loading" id="rb-loading" style="display: none;">
+        <div class="loading__icon">
+            <svg viewBox="25 25 50 50">
+                <circle r="20" cx="50" cy="50" fill="none"></circle>
+            </svg>
+        </div>
+        <!--                    <div class="loading__text" id="popup-loading">Loading</div>-->
+    </div>
+
+    <div class="rb-loading" id="toast" style="display: none;">
+       <div class="loading__text" id="popup-toast"></div>
+    </div>
+
+    <div class="rb-install-now-layer" id="rb-install-now-layer">
+        <div class="layer__body">
+            <div class="install-now__header">
+                <div class="install-now__header__title">
+                    <img loading="lazy" src="images/ic_raid_install.png" alt="">
+                    <span id="popup-rapid_install">Rapid Install</span>
+                </div>
+                <div class="install-now__header__msg" id="popup-times_faster"> 4 times faster</div>
+            </div>
+            <div class="install-now__main">
+                <div class="install-now__loading" id="install_now_loading">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" fill="none" r="20"></circle>
+                    </svg>
+                    <p></p>
+                </div>
+                <div class="install-now__actived" id="install_now_actived">
+                    <div class="install-now__actived__tag">
+                        <img loading="lazy" src="images/ic_dun.png" alt="">
+                        <span id="actived">Actived</span>
+                    </div>
+                    <div class="install-now__actived__btn" id="install_now">Install Now</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    (function (window) {
+            const topMenu = document.getElementById("topbar");
+            // 获取顶部菜单距离页面顶部的初始位置
+            const initialTopMenuPosition = topMenu.offsetTop;
+            // 监听滚动事件
+            window.addEventListener("scroll", function () {
+                // 获取滚动的垂直位置
+                const scrollY = window.scrollY || window.pageYOffset;
+                if (scrollY > initialTopMenuPosition) {
+                    topMenu.classList.add("active");
+                } else {
+                    topMenu.classList.remove("active");
+                }
+            });
+        }
+    )(window);
+</script>
+
+</body></html>

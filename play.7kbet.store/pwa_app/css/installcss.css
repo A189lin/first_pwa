@@ -1,0 +1,1080 @@
+#fullscreen {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--theme-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+    --theme-color: #028760;
+    --install-text-color: #ffe336
+}
+
+
+/*@font-face {*/
+/*    font-family: 'Google Sans';*/
+/*    src: url('../fonts/GoogleSans-Regular.ttf') format('truetype');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: 'Google Sans';*/
+/*    src: url('../fonts/GoogleSans-Medium.ttf') format('truetype');*/
+/*    font-weight: 500;*/
+/*    font-style: normal;*/
+/*}*/
+
+
+body{
+	color: #343434;
+	font-size: 15px;
+	background-color: #fff;
+    /*font-family: Google Sans, sans-serif;*/
+    line-height: inherit;
+}
+button{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    -webkit-appearance: none;
+    outline: none;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    font-size: 14px;
+}
+.install{
+	overflow: hidden;
+    padding: 54px 22px 44px;
+}
+.install .top-placeholder{
+    height: 54px;
+}
+.install .topbar{
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    padding:  10px 13px;
+}
+.install .topbar .topbar__left{
+    height: 37px;
+    width: 166px;
+}
+
+.install .topbar .topbar__right{
+    height: 36px;
+    width: 114px;
+}
+
+
+.install .topwrap{
+    position: relative;
+    display: flex;
+    margin-bottom: 28px;
+}
+
+.install .topwrap .header-icon{
+    align-items: center;
+    display: flex;
+    height: 74px;
+    justify-content: center;
+    margin-right: 22px;
+    position: relative;
+    width: 74px;
+}
+
+.install .topwrap .header-icon .toplogo{
+    width: 74px;
+    height: 74px;
+    margin: 0 4px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.install .topwrap .header-icon .toplogo .hide{
+    width: 50px;
+    height: 50px;
+}
+
+.install .topwrap .header-icon .loading-circle{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--theme-color);
+    border-bottom-color: #FAF9F7;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.install .topwrap .right {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.install .topwrap .right .header__info-title {
+    align-items: center;
+    display: flex;
+    margin-bottom: 2px;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+}
+.install .topwrap .right .header__info-title .name {
+    color: #111;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+.install .topwrap .right .header__info-title .header__info-title-tag{
+    flex: 0 0 20px;
+    height: 20px;
+    vertical-align: baseline;
+    width: 20px;
+    margin-left: 3px;
+}
+.install .topwrap .right .author{
+    font-size: 16px;
+    color: var(--theme-color);
+    font-weight: bold;
+    letter-spacing: -0.03rem;
+    margin-bottom: 5px;
+}
+.install .topwrap .right .info {
+    font-size: 15px;
+}
+
+.install .topwrap .right .header__info-play{
+    align-items: center;
+    color: #333;
+    display: flex;
+    font-size: 10px;
+    font-weight: 400;
+    height: 24px;
+}
+.install .topwrap .right .header__info-play .ic_dun{
+    width: 10px;
+    margin-right: 4px;
+}
+
+.install .installinfo{
+	display: flex;
+	box-sizing: border-box;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.scroll-view_H{
+    white-space: nowrap;
+    width: 100%;
+}
+.uni-scroll-view, .uni-scroll-view-content {
+    width: 100%;
+    height: 100%;
+}
+.uni-scroll-view {
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    max-height: inherit;
+}
+.install .installinfo .item {
+    position: relative;
+    width: 34%;
+}
+.scroll-view-item_H, .banner_view_item_H {
+    display: inline-block;
+    text-align: center;
+}
+.install .installinfo .item .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+/*.install .installinfo .item:nth-child(3) .num {*/
+/*    border: 1px solid #000000;*/
+/*    width: fit-content;*/
+/*    margin: 0 auto;*/
+/*    padding: 0 2px;*/
+/*    font-size: 12px;*/
+/*    font-weight: bold;*/
+/*}*/
+.installinfo .xingsvg, .installinfo .tipsvg {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+.installinfo .yearwebd{
+    width: auto;
+    height: 16px;
+    vertical-align: middle;
+}
+.install .installinfo .item .info {
+    font-size: 12px;
+    margin-top: 6px;
+}
+.installinfo::-webkit-scrollbar, .bannerinfo::-webkit-scrollbar{
+    display: none;
+}
+
+.install .share-row{
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.install .share-row .share-row__item{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+    max-width: 220px;
+}
+.install .share-row .share-row__item img{
+    flex: 0 0 17px;
+    height: 20px;
+    width: 17px;
+    margin-right: 10px;
+}
+
+.install .share-row .share-row__item div{
+    color: #00a173;
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.installinfo, .bannerinfo{
+      width: 100%;
+	  white-space: nowrap;
+      overflow-x: auto;
+	  overflow-y: hidden;
+}
+.install .installinfo .item {
+    position: relative;
+    width: 34%;
+}
+.install .installinfo .item .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.install .installinfo .item .info {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 6px;
+}
+.install .installinfo .item:not(:last-child):after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    margin-top: -12px;
+    right: 0;
+    width: 1px;
+    height: 25px;
+    background-color: #D4D3D1;
+}
+.installbtn{
+	display: block;
+	width: calc(100% - 48px);
+	height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 15px 24px;
+    background-color: var(--theme-color);
+	border-color: var(--theme-color);
+	color: #ffffff;
+    text-align: center;
+}
+
+.installbtn-box{
+    display: none;
+    width: calc(100% - 48px);
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 15px 24px;
+    color: #ffffff;
+}
+
+.installbtn-box .install-btn__ing{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: auto;
+    padding: 8px;
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.installbtn-box .install-btn__ing .install-btn__ing__rapid{
+    align-items: center;
+    color: #ffe336;
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 21px;
+}
+
+.installbtn-box .install-btn__ing .install-btn__ing__rapid img{
+    display: block;
+    width: 12px;
+    height: 18px;
+}
+
+.installbtn-box .install-btn__ing .install-btn__ing__countdown{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+
+.bannerinfo {
+    padding: 15px 15px 0;
+	box-sizing: border-box;
+}
+.bannerinfo .banner_view_item_H {
+    position: relative;
+    height: 224px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.bannerinfo .banner_view_item_H:not(:last-child) {
+    margin-right: 12px;
+}
+.bannerinfo .banner_view_item_H .bannerimg {
+    width: auto;
+    height: 100%;
+}
+
+.img-scroll {
+    margin-bottom: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%
+}
+
+.img-scroll::-webkit-scrollbar {
+    display: none
+}
+
+.img-scroll__list {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 224px;
+    width: -moz-max-content;
+    width: max-content
+}
+
+.img-scroll__view {
+    border-radius: 8px;
+    height: 224px;
+    overflow: hidden;
+    margin-right: 11px;
+    margin-left: 11px;
+
+}
+.img-scroll__view:first-child {
+     margin-left: 0
+ }
+
+ .img-scroll__view:last-child {
+     margin-right: 0
+ }
+
+.img-scroll__view img {
+    display: block;
+    height: 100%;
+    width: auto
+}
+
+.fixedswiper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #F7FAFB;
+    top: 0;
+    z-index: 9;
+    margin: 50px auto 0;
+}
+.fixedswiper .iconback {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    z-index: 9;
+    top: 20px;
+    left: 20px;
+    background: var(--theme-color);
+    border-radius: 50%;
+    padding: 5px;
+}
+.my-swipe{
+	width: 100%;
+}
+.my-swipe .bannerimg {
+    display: block;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-height: 100%; /* Ensure image doesn't exceed container height */
+}
+.aboutapp {
+    position: relative;
+    margin-top: 30px;
+}
+.aboutapp .arrowsvg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 23px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.aboutapp .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+	padding-right: 30px;
+}
+.aboutapp .intro {
+    color: #4E4E4E;
+    line-height: 22px;
+	font-size: 15px;
+}
+.aboutapp .btngroup {
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.aboutapp .btngroup .govbtn {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 15px;
+    color: #5f6368;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    height: 30px;
+    justify-content: center;
+    padding: 0 12px;
+    width: fit-content;
+    margin-right: 16px;
+}
+.aboutapp .btngroup .lottbtn {
+    font-size: 16px;
+    padding: 6px 12px;
+    border: 1px solid #323232;
+    border-radius: 8px;
+    margin-left: 0;
+    line-height: inherit;
+}
+.aboutapp .intro .tipsvg {
+    width: 17px;
+    height: 17px;
+    vertical-align: text-bottom;
+    margin-left: 4px;
+}
+.scorewrap {
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.scorewrap .left {
+    text-align: left;
+}
+.scorewrap .left .num {
+    font-size: 58px;
+    margin-bottom: 10px;
+}
+.scorewrap .left .amount {
+    margin-top: 6px;
+    color: #444;
+    font-size: 12px;
+}
+.scorewrap .right {
+    flex: 1;
+    max-width: 180px;
+    margin-left: 10px;
+}
+.scorewrap .right .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    font-size: 11px;
+    color: #444;
+}
+.scorewrap .right .item .progress-box {
+    flex: 1;
+    margin: 0 0 0px 10px;
+}
+
+
+.progress {
+    background-color: #e3e3e3;
+    border-radius: 5px;
+    flex: 1;
+    height: 9px;
+    max-width: 166px;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 14.5px;
+    margin-right: 14.5px
+}
+
+.progress-bar {
+    background: var(--theme-color);
+    border-radius: 5px;
+    height: 100%
+}
+
+.evaluate {
+    margin-top: 30px;
+}
+.evaluate .item:not(:last-child) {
+    margin-bottom: 40px;
+}
+.evaluate .item .topwrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.evaluate .item .topwrap .headimg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.evaluate .item .topwrap .name {
+    font-size: 16px;
+    margin-left: 10px;
+}
+.evaluate .item .topwrap .lve {
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    top: 6px;
+}
+.evaluate .item .grade {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 16px;
+}
+.comments__list-stars{
+    display: flex;
+}
+.evaluate .item .grade .date {
+    font-size: 14px;
+    margin-left: 10px;
+}
+.evaluate .item .comment {
+    line-height: 23px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.evaluate .item .feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.evaluate .item .feedback .ishelp {
+    color: #626260;
+    font-size: 14px;
+}
+.evaluate .item .feedback .groupbtn {
+    display: flex;
+}
+.evaluate .item .feedback .groupbtn .isbtn {
+    border: 1px solid #838184;
+    margin-right: 12px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+	padding-left: 14px;
+    padding-right: 14px;
+	border-radius: 5px;
+	color: #000;
+}
+.evaluate .item .feedback .groupbtn .isbtn.active {
+    background-color: #C1E7FF;
+    border-color: #C1E7FF;
+}
+.other {
+    padding: 10px 30px;
+    border: 1px solid #DFDEDC;
+    margin-top: 17px;
+    border-radius: 8px;
+}
+.other .otherli {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.other .otherli .iconimg {
+    display: block;
+    width: 25px;
+    height: 23px;
+}
+.other .otherli .otherdt {
+    margin-left: 15px;
+    flex: 1;
+    line-height: 21px;
+}
+.other .otherdd {
+    font-size: 12px;
+    margin-left: 41px;
+    margin-top: 8px;
+}
+.other .otherlink {
+	display: block;
+    color: var(--theme-color);
+    font-weight: 600;
+    font-size: 17px;
+    margin: 20px 0;
+	text-decoration: none;
+}
+
+.install .popup{
+    display: none;
+}
+.install .popup .layer__mask {
+    animation-duration: .35s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    background: rgba(0,0,0,.6);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500
+}
+
+.popup-content {
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000
+}
+
+.install .popup .popup-content{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+    width: 75%
+}
+
+.install .popup .popup-content .back_logo{
+    display: block;
+    width: 166px;
+}
+.install .popup .popup-content .back_title{
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 20px;
+    text-align: center;
+}
+.install .popup .popup-content .back_title span{
+    color: var(--theme-color);
+    font-weight: 500;
+}
+.install .popup .popup-content .back__content{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .23);
+    display: flex;
+    margin: 15px 0;
+    padding: 20px;
+    width: 80%;
+}
+.install .popup .popup-content .back__content .back__icon{
+    border-radius: 20%;
+    height: 70px;
+    object-fit: cover;
+    width: 70px;
+    margin-right: 20px;
+}
+.install .popup .popup-content .back__content .back__info {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.install .popup .popup-content .back__content .back__info .back__info__title{
+    align-items: center;
+    display: flex;
+}
+
+.install .popup .popup-content .back__content .back__info .back__info__title span{
+    color: #000;
+    font-size: 22px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+}
+.install .popup .popup-content .back__content .back__info .back__info__title img{
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+}
+.install .popup .popup-content .back__content .back__info .back__info__description{
+    color: var(--theme-color);
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px 0
+}
+.install .popup .popup-content .back__content .back__info .back__info__play{
+    align-items: center;
+    color: #333;
+    display: flex;
+    font-size: 10px;
+    font-weight: 500;
+    height: 14px;
+}
+.install .popup .popup-content .back__content .back__info .back__info__play .ic_dun{
+    margin-right: 4px;
+    width: 10px;
+}
+
+.install .popup .popup-content .back__detail{
+    align-items: center;
+    display: flex;
+}
+
+.install .popup .popup-content .back__detail img{
+    width: 70px;
+    margin-right: 12px;
+}
+
+.install .popup .popup-content .back__detail .back__detail__introduction{
+    color: #000;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 0;
+}
+
+.install .popup .popup-content .back__detail .back__detail__introduction span{
+    color: var(--theme-color);
+    font-weight: 500;
+}
+
+.install .popup .popup-content .back__btn{
+    align-items: center;
+    background-color: var(--theme-color);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    height: 35px;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.install .rb-loading{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
+    line-height: 20px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+    z-index:2000;
+}
+
+.install .rb-loading .loading__text {
+    width: 100px;
+    padding: 8px 12px;
+}
+
+.install .rb-loading .loading__icon {
+    animation: loading-rotate 2s linear infinite;
+    display: flex;
+    height: 30px;
+    margin-bottom: 8px;
+    width: 30px
+}
+
+.install .rb-loading .loading__icon svg {
+    color: #fff;
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.install .rb-loading .loading__icon svg circle {
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    animation: loading-circular 1s ease-in-out infinite
+}
+
+
+.install .rb-install-now-layer{
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.install .rb-install-now-layer .layer__body {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    right: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 24px 24px;
+    width: 75%;
+}
+
+.rb-install-now-layer .layer__body .install-now__header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 37px
+}
+
+.rb-install-now-layer .layer__body .install-now__header__title {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px
+}
+
+.rb-install-now-layer .layer__body .install-now__header__title img {
+    width: 28px
+}
+
+[dir=ltr] .rb-install-now-layer .layer__body .install-now__header__title img {
+    margin-right: 7px
+}
+
+[dir=rtl] .rb-install-now-layer .layer__body .install-now__header__title img {
+    margin-left: 7px
+}
+
+.rb-install-now-layer .layer__body .install-now__header__title span {
+    color: #666;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 33px
+}
+
+.rb-install-now-layer .layer__body .install-now__header__msg {
+    align-items: center;
+    border: 1px solid #747475;
+    border-radius: 3px;
+    color: #666;
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    height: 25px;
+    padding: 0 10px
+}
+
+.rb-install-now-layer .layer__body .install-now__main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 108px;
+    justify-content: center;
+    width: 100%
+}
+
+.rb-install-now-layer .layer__body .install-now__loading {
+    align-items: center;
+    color: var(--theme-color);
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    position: relative;
+    width: 100px
+}
+
+.rb-install-now-layer .layer__body .install-now__loading svg {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+.rb-install-now-layer .layer__body .install-now__loading svg circle {
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    animation: loading-circular 1s ease-in-out infinite
+}
+
+.rb-install-now-layer .layer__body .install-now__loading p {
+    align-items: center;
+    color: var(--theme-color);
+    display: flex;
+    font-size: 16px;
+    font-weight: 600
+}
+
+.rb-install-now-layer .layer__body .install-now__loading p span {
+    text-align: center;
+    width: 9px
+}
+
+.rb-install-now-layer .layer__body .install-now__actived {
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%
+}
+
+.rb-install-now-layer .layer__body .install-now__actived__tag {
+    align-items: center;
+    background: rgba(2,135,96,.1);
+    border: 1px solid var(--theme-color);
+    border-radius: 14px;
+    display: flex;
+    height: 28px;
+    justify-content: center;
+    margin-bottom: 34px;
+    padding: 0 11px
+}
+
+.rb-install-now-layer .layer__body .install-now__actived__tag img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    margin-left: 5px
+}
+
+
+.rb-install-now-layer .layer__body .install-now__actived__tag span {
+    color: var(--theme-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px
+}
+
+.rb-install-now-layer .layer__body .install-now__actived__btn {
+    align-items: center;
+    background: var(--theme-color);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    height: 45px;
+    justify-content: center;
+    width: 100%
+}
+
+
+
+@keyframes loading-rotate {
+    0% {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+
+@keyframes loading-circular {
+    0% {
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0
+    }
+
+    50% {
+        stroke-dasharray: 90,150;
+        stroke-dashoffset: -40
+    }
+
+    to {
+        stroke-dasharray: 90,150;
+        stroke-dashoffset: -120
+    }
+}
